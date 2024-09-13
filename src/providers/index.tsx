@@ -1,14 +1,8 @@
-import theme from '@/theme'
-import { ChakraProvider, ColorModeScript } from '@chakra-ui/react'
-import React, { ReactNode } from 'react'
+import React, { ReactNode } from "react";
+import ProviderChakra from "./ProviderChakra";
 
 const Providers = ({ children }: { children: ReactNode }) => {
-    return (
-        <ChakraProvider theme={theme}>
-            <ColorModeScript initialColorMode={theme.config?.initialColorMode} />
-            {children}
-        </ChakraProvider>
-    )
-}
+  return <ProviderChakra>{children}</ProviderChakra>;
+};
 
-export default Providers
+export default Providers;
