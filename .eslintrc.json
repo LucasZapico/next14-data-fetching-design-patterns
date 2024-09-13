@@ -1,3 +1,45 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "root": true,
+  "env": {
+    "browser": true,
+    "amd": true,
+    "node": true,
+    "es6": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended-type-checked",
+    "plugin:prettier/recommended",
+    "next",
+    "next/core-web-vitals",
+    "plugin:react/jsx-runtime"
+  ],
+  "plugins": ["prettier"],
+  "parserOptions": {
+    "project": true,
+    
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  //  0 = off, 1 = warn, 2 = error 
+  "rules": {
+    "prettier/prettier": 0,
+    "react/react-in-jsx-scope": 0,
+    "react/prop-types": 0,
+    "no-unused-vars": 0,
+    "react/no-unescaped-entities": 0,
+    
+    "import/prefer-default-export": 0,
+    "@typescript-eslint/no-unused-vars": 1,
+    "react-hooks/exhaustive-deps": 1,
+    "@typescript-eslint/no-unsafe-assignment": 1,
+    "@typescript/no-unsafe-member-access": 0,
+    "@typescript-eslint/no-unsafe-call": 1,
+    "@typescript-eslint/no-unsafe-member-access": 1,
+    "@typescript-eslint/no-explicit-any": 1
+    
+  }
 }
