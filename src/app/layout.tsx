@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import "@/styles/main.scss"
+import "@/styles/main.scss";
 import Providers from "@/providers";
+import { Box } from "@chakra-ui/react";
 
 export const metadata: Metadata = {
   title: "Next13 Data Fetching Design Patterns",
@@ -16,7 +17,9 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Providers>
-        {children}
+          <Box py={20} as="main">
+            {children}
+          </Box>
         </Providers>
       </body>
     </html>
