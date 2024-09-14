@@ -1,5 +1,13 @@
 import React from "react";
-import { Box, Container, Heading, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Container,
+  Divider,
+  Heading,
+  Text,
+} from "@chakra-ui/react";
+import { getPosts } from "@/app/server/getPost";
 
 const MainPage = () => {
   return (
@@ -12,6 +20,8 @@ const MainPage = () => {
           Examples of different data fetching and mutation design patterns in
           NextJs 14
         </Text>
+        <Divider my={8} />
+        <Button onClick={getPosts}>Fetch Posts</Button>
       </Container>
     </Box>
   );
